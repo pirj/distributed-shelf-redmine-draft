@@ -49,6 +49,8 @@ Rails::Initializer.run do |config|
   # Define your email configuration in email.yml instead.
   # It will automatically turn deliveries on
   config.action_mailer.perform_deliveries = false
+  
+  config.action_controller.session = { :key => "_redmine_session", :secret => "c229b394591410d0e98c31d2021bcae3" }
 
   config.gem 'rubytree', :lib => 'tree'
   config.gem 'dshelf', :lib => 'dshelf'
