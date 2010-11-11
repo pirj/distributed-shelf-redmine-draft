@@ -77,11 +77,11 @@ class Attachment < ActiveRecord::Base
       logger.debug("saving '#{self.diskfile}'")
       md5 = Digest::MD5.new
       File.open(diskfile, "wb") do |f| 
-        buffer = ""
-        while (buffer = @temp_file.read(8192))
+#        while (buffer = @temp_file.read(8192))
+        buffer = @temp_file.read
           f.write(buffer)
           md5.update(buffer)
-        end
+#        end
       end
       self.digest = md5.hexdigest
     end
