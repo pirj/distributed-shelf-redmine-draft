@@ -32,10 +32,10 @@ config.action_mailer.logger = nil
 Engines.public_directory = '/plugin_assets'
 Attachment.storage_path = '/files'
 
-require 'dshelf'
-DistributedShelf::config = {
-  :distributed_path => ['/files', '/plugin_assets'],
-  :storage_url => ENV['DISTRIBUTED_SHELF_URL']
-}
-Dir.mkdir '/plugin_assets' unless File.exists?('/plugin_assets')
-Dir.mkdir '/files' unless File.exists?('/files')
+# require 'dshelf'
+# DistributedShelf::config = {
+#   :distributed_path => ['/files', '/plugin_assets'],
+#   :storage_url => ENV['DISTRIBUTED_SHELF_URL']
+# }
+# Dir.mkdir '/plugin_assets' unless File.exists?('/plugin_assets')
+# Dir.mkdir '/files' unless File.exists?('/files')
