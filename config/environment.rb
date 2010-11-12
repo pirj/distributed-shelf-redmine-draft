@@ -17,14 +17,6 @@ rescue LoadError
   # Not available
 end
 
-require 'dshelf'
-DistributedShelf::config = {
-  :distributed_path => ['/files', '/plugin_assets'],
-  :storage_url => ENV['DISTRIBUTED_SHELF_URL']
-}
-Dir.mkdir '/plugin_assets' unless File.exists?('/plugin_assets')
-Dir.mkdir '/files' unless File.exists?('/files')
-
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence those specified here
   
