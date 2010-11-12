@@ -25,9 +25,6 @@ DistributedShelf::config = {
 Dir.mkdir '/plugin_assets' unless File.exists?('/plugin_assets')
 Dir.mkdir '/files' unless File.exists?('/files')
 
-Engines.public_directory = '/plugin_assets'
-Attachment.storage_path = '/files'
-
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence those specified here
   
