@@ -53,7 +53,7 @@ Rails::Initializer.run do |config|
   config.action_controller.session = { :key => "_redmine_session", :secret => "c229b394591410d0e98c31d2021bcae3" }
 
   config.gem 'rubytree', :lib => 'tree'
-  config.gem 'dshelf', :lib => 'dshelf'
+  # config.gem 'dshelf', :lib => 'dshelf'
   
   # Load any local configuration that is kept out of source control
   # (e.g. gems, patches).
