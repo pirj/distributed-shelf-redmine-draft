@@ -30,7 +30,7 @@ config.action_mailer.raise_delivery_errors = false
 config.action_mailer.logger = nil
 
 Engines.public_directory = '/plugin_assets'
-Attachment.storage_path = '/files'
+# Attachment.storage_path = '/files'
 
 require 'dshelf'
 DistributedShelf::config = {
